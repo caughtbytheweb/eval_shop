@@ -1,0 +1,8 @@
+<h2>Product edition form</h2>
+
+<form [formGroup]="productForm" (ngSubmit)="saveproduct($event)">
+    <input type="text" placeholder="name" formControlName="name">
+    <input type="text" placeholder="description" formControlName="description">
+    <input type="number" placeholder="price" formControlName="price">
+    <button type="submit">Save</button>
+</form>

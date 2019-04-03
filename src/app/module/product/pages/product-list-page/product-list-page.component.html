@@ -1,0 +1,10 @@
+<h1>Products listing</h1>
+
+<div *ngIf="products.length !== 0">
+  <app-product-card *ngFor="let currentproduct of products" (onDelete)="onDeleteproduct($event)" (onUpdate)="onUpdateproduct($event)"
+      [product]="currentproduct"></app-product-card>
+</div>
+
+<div *ngIf="products.length == 0">
+  Aucun product à afficher
+</div>
